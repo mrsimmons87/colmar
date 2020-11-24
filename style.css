@@ -1,0 +1,486 @@
+/*-----------------------MainComponents------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #555;
+  --logo-span-color-dark: rgb(54, 54, 54);
+  --logo-span-color-light: rgb(124, 124, 124);
+  --nav-hover-color: rgb(41, 40, 40);
+  --section-bg-color: rgb(221, 221, 221);
+  --header-link-color: #fff;
+  --dates-text-link-color: #3498db;
+  --dates-hover-color: #2980b9;
+  --mobile-text-color: #000;
+}
+
+html {
+  font-size: 22px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+}
+
+/*-------------------------ResuableComponents-------------------*/
+.row {
+  padding: 32px 0;
+}
+
+header,
+#courses {
+  background-color: var(--section-bg-color);
+}
+
+.margin-small {
+  margin-left: 24px;
+}
+
+#header-image img,
+#details-testimonial img,
+#exhibit-content video {
+  width: 80%;
+  height: auto;
+}
+
+.dates-text *,
+.read-link {
+  padding: 10px 0;
+}
+
+/*--------------------Headings&Paragraphs---------------------------*/
+h1 {
+  font-size: 3.8rem;
+}
+
+#header-text p {
+  font-size: 1.2rem;
+}
+
+#details-paragraph,
+#details-heading,
+#exhibit-paragraph {
+  width: 80%;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+#courses-heading,
+#exhibit-heading {
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+.cap-courses {
+  text-transform: uppercase;
+}
+
+/*---------------------Links---------------------------*/
+#nav-links ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+#nav-links ul li a:hover {
+  color: var(--nav-hover-color);
+}
+
+#header-text a,
+.dates-text a {
+  text-decoration: none;
+}
+
+#header-text a {
+  background-color: var(--nav-hover-color);
+  color: var(--header-link-color);
+  padding: 20px;
+  position: relative;
+  top: 35px;
+}
+
+#header-text a:hover {
+  opacity: 0.9;
+}
+
+.dates-text a {
+  color: var(--dates-text-link-color);
+}
+
+.dates-text a:hover {
+  color: var(--dates-hover-color);
+}
+
+/*---------------------MOBILE///Links---------------------------*/
+#nav-mobile-links {
+  display: none;
+}
+/*-------------------------GridCases------------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 72px;
+  margin-right: 72px;
+}
+
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+
+/*------------------------NAV----------------------------*/
+
+#nav-logo {
+  display: inline-block;
+}
+
+#nav-logo img {
+  padding-right: 5px;
+}
+
+#logo-text {
+  float: right;
+  font-weight: bold;
+  word-spacing: 0px !important;
+  text-transform: uppercase;
+  color: var(--logo-span-color-light);
+}
+
+#logo-span {
+  color: var(--logo-span-color-dark);
+}
+
+#nav-links ul {
+  float: right;
+}
+
+#nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  bottom: 40px;
+  margin: 0 24px;
+}
+
+/*------------------------HEADER----------------------------*/
+
+#header-text {
+  text-align: left;
+}
+
+#header-text * {
+  padding: 20px 0;
+}
+
+/*----------------------------DETAILS--------------------------*/
+
+#dates-container {
+  border-bottom: 1px solid var(--logo-span-color-light);
+}
+
+.dates-text {
+  position: relative;
+  top: 15%;
+  right: 8%;
+}
+
+/*----------------------------COURSES--------------------------*/
+.courses-box {
+  width: 80%;
+  margin: 32px auto;
+}
+
+.courses-box img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.courses-box figcaption {
+  background-color: var(--header-link-color);
+}
+
+.courses-box figcaption * {
+  padding: 20px;
+}
+
+#courses-mobile {
+  display: none;
+}
+
+/*----------------------------EXHIBIT--------------------------*/
+#mobile-exhibit {
+  display: none;
+}
+
+/*----------------------------FOOTER--------------------------*/
+footer {
+  border-top: 2px solid var(--logo-span-color-light);
+}
+
+#footer-text {
+  padding: 10px 0;
+}
+
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+  /*----------------MainComponents-------------*/
+  html {
+    font-size: 16px;
+  }
+
+  /*----------------ReusableComponent----------*/
+
+  #header-image img,
+  #details-testimonial img,
+  .dates-image img,
+  #exhibit-content video,
+  #mobile-exhibit video {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #details,
+  #courses,
+  #mobile-exhibit {
+    border-bottom: 2px solid var(--logo-span-color-light);
+  }
+
+  /*---------------Headings&Paragraphs---------------*/
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  #header-text p {
+    font-size: 0.98rem;
+  }
+
+  /*-----------------GridCases----------------*/
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*---------------NAV----------------------*/
+  #desktop-nav {
+    display: none;
+  }
+
+  #nav-mobile-links {
+    display: inline-block;
+  }
+
+  #nav-mobile-links ul {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 25%;
+  }
+
+  #nav-mobile-links ul li {
+    list-style: none;
+    padding-right: 40px;
+  }
+
+  #nav-mobile-links ul li a img {
+    width: 50px;
+    height: 50px;
+  }
+
+  #nav-mobile-links ul li a:hover {
+    opacity: 0.7;
+  }
+
+  /*----------------HEADER--------------------*/
+  header {
+    padding-top: 0 !important;
+    padding-bottom: 80px !important;
+  }
+
+  #header-text * {
+    padding: 5px 0;
+    margin-left: 10px;
+  }
+
+  /*------------------DETAILS---------------*/
+
+  #details-testimonial {
+    display: none;
+  }
+
+  #details-dates {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  #dates-container {
+    border-bottom: none !important;
+  }
+
+  .dates-text {
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative;
+    left: 2%;
+  }
+
+  /*-----------------COURSES--------------*/
+  #courses {
+    background-color: var(--header-link-color);
+  }
+
+  .courses-box {
+    display: none;
+  }
+
+  #courses-mobile {
+    display: block;
+  }
+
+  #courses-mobile h3 {
+    border: 1px solid var(--section-bg-color);
+    padding: 20px;
+    color: var(--mobile-text-color);
+  }
+
+  #courses-mobile ul li {
+    list-style: none;
+    background-color: var(--logo-span-color-light);
+    margin: 10px 20px;
+  }
+
+  /*----------------------------EXHIBIT--------------------------*/
+  #exhibit-content,
+  #fisma-content {
+    display: none;
+  }
+
+  #mobile-exhibit {
+    display: block;
+  }
+
+  /*----------------------------FOOTER--------------------------*/
+  footer {
+    border-top: none;
+    padding: 15px 0 !important;
+  }
+
+  #footer-text {
+    padding: 5px 0;
+  }
+}
+
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1456px) {
+  #header-text * {
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+@media only screen and (max-width: 1278px) {
+  #header-text * {
+    padding: 5px 0;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+@media only screen and (max-width: 1117px) {
+  /*-------------------------GridCases------------------------*/
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*--------------------Headings&Paragraphs---------------------------*/
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  /*------------------------HEADER----------------------------*/
+  #header-image img {
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+  }
+
+  #header-text a {
+    position: relative;
+    top: 5px;
+    left: 10px;
+  }
+
+  #header-text * {
+    padding: 10px;
+  }
+
+  /*----------------------------DETAILS--------------------------*/
+  #details {
+    padding: 0;
+  }
+
+  .dates-image img,
+  #details-testimonial {
+    display: none;
+  }
+
+  #dates-container {
+    border-bottom: none;
+  }
+
+  #details-dates {
+  }
+
+  .dates-text {
+    border: 1px solid #000;
+    position: relative;
+    left: 0;
+    padding: 20px 10px;
+  }
+}
+
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+@media only screen and (max-width: 878px) {
+  #nav-links {
+    display: none;
+  }
+}
